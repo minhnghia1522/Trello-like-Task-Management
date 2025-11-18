@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom scrollbar for dark mode */
+.dark ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #404040;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #505050;
+}
+
+/* Quill editor dark mode styling */
+.dark .ql-toolbar {
+  background: #1a1a1a;
+  border-color: #404040 !important;
+}
+
+.dark .ql-container {
+  background: #0a0a0a;
+  border-color: #404040 !important;
+}
+
+.dark .ql-editor {
+  color: #ededed;
+}
+
+.dark .ql-stroke {
+  stroke: #ededed;
+}
+
+.dark .ql-fill {
+  fill: #ededed;
+}
+
+.dark .ql-picker-label {
+  color: #ededed;
+}
